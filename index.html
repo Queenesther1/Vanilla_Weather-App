@@ -17,67 +17,113 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app-wrapper">
-        <div class="weather-app">
-          <form id="search-form" class="mb-3">
-            <div class="row">
-              <div class="col-9">
-                <input
-                  type="search"
-                  placeholder="Type a city.."
-                  class="form-control"
-                  id="city-input"
-                  autocomplete="off"
-                />
+      <div class="weather-app-vanilla">
+        <div class="weather-app-wrapper">
+          <div class="weather-app">
+            <form id="search-form" class="mb-3">
+              <div class="row">
+                <div class="col-6">
+                  <input
+                    type="search"
+                    placeholder="Type a city.."
+                    class="form-control"
+                    id="city-input"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="col-3">
+                  <input
+                    type="submit"
+                    value="Search"
+                    class="btn btn-primary w-100"
+                  />
+                </div>
+                <div class="col-3">
+                  <button type="button" 
+                  id="currentbutton"
+                   value="CURRENT"
+                  class="btn btn-success">Current</button>
+                </div>
+                
               </div>
-              <div class="col-3">
-                <input
-                  type="submit"
-                  value="Search"
-                  class="btn btn-primary w-100"
-                />
-              </div>
-            </div>
-          </form>
-          <div class="overview">
-            <h1 id="city"></h1>
-            <ul>
-              <li>Last updated at: <span id="date"></span></li>
-              <li id="description">Clear</li>
-            </ul>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <span>
-                <img
-                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-                  alt="clear"
-                  target="_blank"
-                  id="icon"
-                />
-                <strong id="temperature"> 12</strong>°C | °F
-              </span>
-            </div>
-
-            <div class="col-6">
+            </form>
+            <div class="overview">
+              <h1 id="city"></h1>
               <ul>
-                <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind: <span id="wind"></span>km/h</li>
+                <li>Last updated at: <span id="date"></span></li>
+                <li id="description">Clear</li>
               </ul>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="d-flex weather-temperature">
+                  <img
+                    src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                    alt="clear"
+                    target="_blank"
+                    id="icon"
+                  />
+                  <strong id="temperature"></strong
+                  ><span class="units"
+                    >°C |<a href="#" id="fahrenheit-link" class="hyperlink"
+                      >°F</a
+                    ></span
+                  >
+                </div>
+              </div>
+
+              <div class="col-6">
+                <ul>
+                  <li>Humidity: <span id="humidity"></span>%</li>
+                  <li>Wind: <span id="wind"></span>km/h</li>
+                </ul>
+              </div>
+              <div class="row days">
+          <div class="col">
+            Sat
+            <br/>
+            ☀️<br/>27°C
+          </div>
+          <div class="col">
+              Sun
+              <br/>
+              ☀️<br/>28°C
+          </div>
+          <div class="col">
+              Mon
+              <br/>
+              ☀️<br/>26°C
+          </div>
+          <div class="col">
+              Tue
+              <br/>
+              ☀️<br/>27°C
+          </div>
+          <div class="col">
+              Wed
+            <br/>
+            ☀️<br/>28°C
+            </div>
+            <br/>
+            
+            <div>
             </div>
           </div>
         </div>
+        
       </div>
-      <small>
-        <a
-          href="https://github.com/Queenesther1/Vanilla_Weather-App"
-          target="_blank"
-        >
-          Open source code
-        </a>
-        by Esther Babatunde
-      </small>
     </div>
+      <div>
+    <small>
+          <a
+            href="https://github.com/Queenesther1/Vanilla_Weather-App"
+            target="_blank"
+          >
+            Open source code
+          </a>
+          by Esther Babatunde
+        </small>
+      </div>
     <script src="src/index.js"></script>
   </body>
 </html>
