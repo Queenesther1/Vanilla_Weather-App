@@ -20,6 +20,9 @@ h1 {
   line-height: 28px;
   margin-bottom: 0;
 }
+a {
+  text-decoration: none;
+}
 
 ul {
   margin: 0;
